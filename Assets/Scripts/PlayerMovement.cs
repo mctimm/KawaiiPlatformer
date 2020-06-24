@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     bool flipped = false;
     bool invincible = false;
     float currentDirection;
-
+    
     bool gameOver = false;
 
     public int health = 5;
@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
     float currentLockTime = 0f;
     float lockTime = 1f;
-
-
     
     public Transform groundCheck;
    
