@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     bool gameOver = false;
 
     public int health = 5;
-    public int SpellsLeft = 5;
-    bool Spellcasted;
 
     float BLINKTIMETOTAL = 3.0f;
     float BLINKDURATION = 0.2f;
@@ -31,12 +29,12 @@ public class PlayerMovement : MonoBehaviour
     float lockTime = 1f;
 
 
-    [SerializeField]
-    Transform groundCheck;
-    [SerializeField]
-    Transform groundCheckL;
-    [SerializeField]
-    Transform groundCheckR;
+    
+    public Transform groundCheck;
+   
+    public Transform groundCheckL;
+    
+    public Transform groundCheckR;
     float speed = 6f;
     float walkSpeed  = 4f;
     float runSpeed = 6f;
@@ -154,27 +152,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             Invoke("EndGame", 2.0f);
         }
-           if(Input.GetKeyDown(KeyCode.K) && SpellsLeft > 0){
-            animator.SetBool("SpellCasting", true);
-            Spellcasted = true;
-            //print(SpellsLeft);
-            animator.SetBool("Pout", false);
-        }else if(Input.GetKey(KeyCode.P)){
-            animator.SetBool("Pout", true);
-            animator.SetBool("SpellCasting", false);
-        }else{
-            animator.SetBool("Pout", false);
-            animator.SetBool("SpellCasting", false);
-        }
 
         if(Input.GetKey(KeyCode.Space) && isGrounded){
             rb.velocity = new Vector2(rb.velocity.x,jumpSpeed);
         }
-    }
-
-    void LateUpdate(){
-        if(Spellcasted) SpellsLeft--;
-        Spellcasted = false;
     }
 
     void EndGame(){
