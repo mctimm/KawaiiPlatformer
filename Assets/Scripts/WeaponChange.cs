@@ -12,7 +12,7 @@ public class WeaponChange : MonoBehaviour
         print(col.gameObject.tag);
         if(col.gameObject.tag.Equals("Player")){
             col.gameObject.GetComponent<FireBallCast>().ChangeWeapon(weapon);
-            col.gameObject.GetComponent<PlayerMovement>().SpellsLeft = 5;
+            //col.gameObject.GetComponent<PlayerMovement>().SpellsLeft = 5;
             Destroy(gameObject);
         }
     }

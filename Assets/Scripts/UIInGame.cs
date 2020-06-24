@@ -19,7 +19,7 @@ public class UIInGame : MonoBehaviour
     void Update()
     {
 
-        topLeft.text = "Heath: " + player.GetComponent<PlayerMovement>().health 
-            + "\nSpells:" + player.GetComponent<PlayerMovement>().SpellsLeft;
+        topLeft.text = "Heath: " + player.GetComponent<PlayerMovement>().health;
+           // + "\nSpells:" + player.GetComponent<PlayerMovement>().SpellsLeft;
     }
 }

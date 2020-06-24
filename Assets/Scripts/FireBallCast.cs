@@ -15,7 +15,7 @@ public class FireBallCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K) && player.SpellsLeft > 0){
+        if(Input.GetKeyDown(KeyCode.K) && 1 > 0){
             Shoot();
             //Invoke("Shoot", 0f);
         }
