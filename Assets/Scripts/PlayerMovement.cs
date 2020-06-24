@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded |= Physics2D.Linecast(transform.position, groundCheckL.position, 1 << LayerMask.NameToLayer("Ground"));
         isGrounded |= Physics2D.Linecast(transform.position, groundCheckR.position, 1 << LayerMask.NameToLayer("Ground"));
         //print(LayerMask.NameToLayer("Ground"));
-        //print(isGrounded);
+        print(isGrounded);
 
         float direction = Input.GetAxis("Horizontal");
         float currentAccel = accel *direction;
