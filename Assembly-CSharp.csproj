@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\FireBallBehavior.cs" />
      <Compile Include="Assets\Scripts\FireBallCast.cs" />
+     <Compile Include="Assets\Scripts\FoxMaschotMovement.cs" />
      <Compile Include="Assets\Scripts\GhoulMovement.cs" />
      <Compile Include="Assets\Scripts\LevelEnder.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -659,6 +660,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/mattt/KawaiiPlatformer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.quicksearch">
+        <HintPath>C:/Users/mattt/KawaiiPlatformer/Library/ScriptAssemblies/com.unity.quicksearch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
