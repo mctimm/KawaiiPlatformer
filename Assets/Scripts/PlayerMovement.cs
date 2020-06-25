@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         float direction = Input.GetAxis("Horizontal");
         float currentAccel = accel *direction;
         
-        if(locked && (currentLockTime < lockTime || !isGrounded)){
+        if(locked && (currentLockTime < lockTime) && !isGrounded){
             currentLockTime += Time.deltaTime;
             return;
         }else {
@@ -148,10 +148,10 @@ public class PlayerMovement : MonoBehaviour
             gameOver = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rb.velocity = Vector2.zero;
-            Invoke("EndGame", 2.0f);
+            //Invoke("EndGame", 2.0f);
         }
 
-        if(Input.GetKey(KeyCode.Space) && isGrounded){
+        if(Input.GetKey(KeyCode.Space) && isGrounded && rb.velocity.y <= 0.1){
             rb.velocity = new Vector2(rb.velocity.x,jumpSpeed);
         }
     }

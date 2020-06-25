@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Game Design Idea: use this for moving platforms
 public class DivingEnemyBehavior : EnemyBasics
 {
     // Start is called before the first frame update
@@ -75,7 +76,7 @@ public class DivingEnemyBehavior : EnemyBasics
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
-        animator.SetBool("Dead", true);
+        //animator.SetBool("Dead", true);
         Destroy(gameObject, 0.5f);
         dead = true;
     }
