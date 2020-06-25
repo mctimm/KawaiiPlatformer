@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float offset = 5f;
+    public float offset = 0f;
 
     Transform playerTransform;
     void Start()
@@ -21,13 +21,13 @@ public class CameraFollow : MonoBehaviour
         float playerX = playerTransform.position.x;
 
         //this should move the camera to keep up with the player
-        
         if(playerX < temp.x)
         {//for if the player is going back
             if(temp.x - playerX >= offset)
             {
                 temp.x = playerX + offset;
             }
+            
         }
         else if(playerX > temp.x)
         {// for when the player is going forward.
@@ -35,10 +35,11 @@ public class CameraFollow : MonoBehaviour
             {
                 temp.x = playerX - offset;
             }
+            
         }
 
-        if(temp.x <= -4f){
-            temp.x = -4f;
+        if(temp.x <= 0.003f){
+            temp.x = 0.003f;
 
         }
 
