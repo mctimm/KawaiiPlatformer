@@ -43,11 +43,11 @@ public class CatBehavior : EnemyBasics
         totalMovement += Mathf.Abs(Time.deltaTime * rb.velocity.x) ;
         rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         gameObject.GetComponent<SpriteRenderer>().flipX = direction > 0;
-        animator.SetFloat("Speed", Mathf.Abs(direction));
+        //animator.SetFloat("Speed", Mathf.Abs(direction));
 
-        //if(canPounce && Random.Range(0,100) > 98){
-        //    Pounce();
-        //}
+        if(canPounce && Random.Range(0,100) > 98){
+            Pounce();
+        }
 
     }
 
