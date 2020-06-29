@@ -17,6 +17,24 @@ TextureImporter:
   - first:
       213: -5210605946880364676
     second: simpleFuedalTileMap_4
+  - first:
+      213: 5781225387686787854
+    second: simpleFuedalTileMap_0
+  - first:
+      213: 2441189343263447192
+    second: simpleFuedalTileMap_1
+  - first:
+      213: -7268840921358682619
+    second: simpleFuedalTileMap_2
+  - first:
+      213: -66923692014384865
+    second: simpleFuedalTileMap_3
+  - first:
+      213: 3502467448982912072
+    second: simpleFuedalTileMap_4
+  - first:
+      213: 7171421460186823900
+    second: simpleFuedalTileMap_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6181a2538d2384a40800000000000000
-      internalID: 5352584061316110358
+      spriteID: e0b7a8f1cd90b3050800000000000000
+      internalID: 5781225387686787854
       vertices: []
       indices: 
       edges: []
@@ -137,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35a9537a46af1c140800000000000000
-      internalID: 4738343593179454035
+      spriteID: 898dfa216c8d0e120800000000000000
+      internalID: 2441189343263447192
       vertices: []
       indices: 
       edges: []
@@ -158,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bad9effa3617ad00800000000000000
-      internalID: 983779486261172917
+      spriteID: 506b799a1b3ef1b90800000000000000
+      internalID: -7268840921358682619
       vertices: []
       indices: 
       edges: []
@@ -179,14 +197,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29641519d6c2e0530800000000000000
-      internalID: 3823041982785210002
+      spriteID: f19cc66b14d321ff0800000000000000
+      internalID: -66923692014384865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: simpleFuedalTileMap_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cbef586934b9030800000000000000
+      internalID: 3502467448982912072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simpleFuedalTileMap_5
       rect:
         serializedVersion: 2
         x: 72
@@ -200,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7f68af8f7530b7b0800000000000000
-      internalID: -5210605946880364676
+      spriteID: cdc7c0d72d1068360800000000000000
+      internalID: 7171421460186823900
       vertices: []
       indices: 
       edges: []

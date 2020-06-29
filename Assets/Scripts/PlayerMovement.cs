@@ -29,16 +29,14 @@ public class PlayerMovement : MonoBehaviour
     float lockTime = 1f;
     
     public Transform groundCheck;
-   
     public Transform groundCheckL;
-    
     public Transform groundCheckR;
     float speed = 6f;
     float walkSpeed  = 4f;
     float runSpeed = 6f;
     float accel = 4f;
     float slowDown = 2f;
-    float jumpSpeed = 8f;
+    float jumpSpeed = 7.5f;
     Animator animator;
     SpriteRenderer sprite;
     // Start is called before the first frame update
@@ -148,16 +146,16 @@ public class PlayerMovement : MonoBehaviour
             gameOver = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rb.velocity = Vector2.zero;
-            //Invoke("EndGame", 2.0f);
+            Invoke("EndGame", 2.0f);
         }
 
-        if(Input.GetKey(KeyCode.Space) && isGrounded && rb.velocity.y <= 0.1){
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded && rb.velocity.y <= 0.1){
             rb.velocity = new Vector2(rb.velocity.x,jumpSpeed);
         }
     }
 
     void EndGame(){
-            SceneManager.LoadScene("GameOverScene");        
+            SceneManager.LoadScene("GameOver");        
     }
 
     private void Recoil(){
