@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(!isGrounded)
         {
-            currentAccel /= 8;
+            currentAccel /= 12;
         }
         else {
             if(absSpeed < slowDown){

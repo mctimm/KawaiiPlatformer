@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5084509451670138846}
   - component: {fileID: 5084509451670138847}
   - component: {fileID: 5084509451670138845}
-  - component: {fileID: 5084509451670138844}
+  - component: {fileID: 7124924152180133580}
   m_Layer: 0
   m_Name: JapaneseFoxRun1
   m_TagString: Enemy
@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5084509451670138845
 MonoBehaviour:
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f82f2b4a78505940b4d11be8e418897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &5084509451670138844
-PolygonCollider2D:
+--- !u!61 &7124924152180133580
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,7 +150,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.006058231, y: -0.032887325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,20 +160,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.019188961, y: 0.28784323}
-      - {x: -0.08713722, y: 0.24925506}
-      - {x: -0.11427443, y: 0.15851015}
-      - {x: -0.13, y: 0.17}
-      - {x: -0.12639253, y: 0.12003889}
-      - {x: -0.14282355, y: 0.00999999}
-      - {x: -0.13639247, y: -0.12286274}
-      - {x: -0.099999994, y: -0.29999998}
-      - {x: -0.08536919, y: -0.30057806}
-      - {x: -0.006536643, y: -0.29942048}
-      - {x: 0.10106222, y: -0.30006322}
-      - {x: 0.11925499, y: -0.22356865}
-      - {x: 0.0935297, y: -0.018033108}
-      - {x: 0.13854918, y: 0.1378433}
-      - {x: 0.14356868, y: 0.19137321}
+  serializedVersion: 2
+  m_Size: {x: 0.23055997, y: 0.54653096}
+  m_EdgeRadius: 0

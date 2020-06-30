@@ -55,7 +55,7 @@ public class FoxMaschotMovement : EnemyBasics
     }
 
     public override void Death(){
-        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         //animator.SetBool("Dead", true);
