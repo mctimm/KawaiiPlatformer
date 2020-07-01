@@ -6,7 +6,7 @@ public class FoxMaschotMovement : EnemyBasics
 {
     // Start is called before the first frame update
     float totalMovement = 0.0f;
-    float MOVEMENTCAP = 10.0f;
+    public float MOVEMENTCAP = 10.0f;
     int direction = 0;
     float speed = 3f;
 
@@ -23,6 +23,7 @@ public class FoxMaschotMovement : EnemyBasics
     void Start()
     {
         direction = -1;
+        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class FoxMaschotMovement : EnemyBasics
         if(dead){
             return;
         }
-        if(totalMovement > MOVEMENTCAP || rb.velocity.x == 0){
+        if(totalMovement > MOVEMENTCAP || Mathf.Abs(rb.velocity.x) < 0.01){
             direction = -direction;
             totalMovement = 0.0f;
         }
@@ -43,12 +44,14 @@ public class FoxMaschotMovement : EnemyBasics
         rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         gameObject.GetComponent<SpriteRenderer>().flipX = direction > 0;
         //animator.SetFloat("Speed", Mathf.Abs(direction));
+        print(totalMovement > MOVEMENTCAP || Mathf.Abs(rb.velocity.x) < 0.01);
+        print(direction);
 
     }
 
     void OnCollisionEnter2D(Collision2D col){
         print(col.gameObject.tag);
-        if(!col.gameObject.tag.Equals("Player")){
+        if(!col.gameObject.tag.Equals("Player") && !col.gameObject.tag.Equals("Untagged")){
                 direction = -direction;
                 totalMovement = 0.0f;
         }

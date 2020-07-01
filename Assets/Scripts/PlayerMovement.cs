@@ -72,11 +72,8 @@ public class PlayerMovement : MonoBehaviour
             locked = false;
         }
 
-        if(Input.GetKey(KeyCode.L)){
-            speed = runSpeed;
-        }else{
-            speed = walkSpeed;
-        }
+        
+        
 
         animator.SetFloat("Speed", Mathf.Abs(direction));
         
@@ -101,8 +98,15 @@ public class PlayerMovement : MonoBehaviour
         if(!isGrounded)
         {
             currentAccel /= 12;
+            
         }
         else {
+            if(Input.GetKey(KeyCode.L)){
+                speed = runSpeed;
+            }else{
+                speed = walkSpeed;
+            }
+
             if(absSpeed < slowDown){
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }

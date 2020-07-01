@@ -6,7 +6,7 @@ public class CatBehavior : EnemyBasics
 {
     // Start is called before the first frame update
     float totalMovement = 0.0f;
-    float MOVEMENTCAP = 10.0f;
+    public float MOVEMENTCAP = 10.0f;
     int direction = 0;
     float speed = 3f;
 
