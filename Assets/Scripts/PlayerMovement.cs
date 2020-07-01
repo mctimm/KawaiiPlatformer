@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     float runSpeed = 6f;
     float accel = 4f;
     float slowDown = 2f;
-    float jumpSpeed = 7.5f;
+    float jumpSpeed = 7.0f;
     Animator animator;
     SpriteRenderer sprite;
     // Start is called before the first frame update

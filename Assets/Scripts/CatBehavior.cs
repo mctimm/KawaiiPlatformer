@@ -6,7 +6,7 @@ public class CatBehavior : EnemyBasics
 {
     // Start is called before the first frame update
     float totalMovement = 0.0f;
-    public float MOVEMENTCAP = 10.0f;
+    public float MOVEMENTCAP = 5.0f;
     int direction = 0;
     float speed = 3f;
 
@@ -24,6 +24,7 @@ public class CatBehavior : EnemyBasics
     void Start()
     {
         direction = -1;
+        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
     }
 
     // Update is called once per frame
@@ -58,10 +59,10 @@ public class CatBehavior : EnemyBasics
 
     void OnCollisionEnter2D(Collision2D col){
         print(col.gameObject.tag);
-        if(!col.gameObject.tag.Equals("Player")){
+        if(!col.gameObject.tag.Equals("Player") && !col.gameObject.tag.Equals("Untagged")){
                 direction = -direction;
+                totalMovement = 0.0f;
         }
-        //canPounce = true;
     }
 
     public override void Death(){

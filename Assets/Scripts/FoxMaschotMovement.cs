@@ -44,8 +44,8 @@ public class FoxMaschotMovement : EnemyBasics
         rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         gameObject.GetComponent<SpriteRenderer>().flipX = direction > 0;
         //animator.SetFloat("Speed", Mathf.Abs(direction));
-        print(totalMovement > MOVEMENTCAP || Mathf.Abs(rb.velocity.x) < 0.01);
-        print(direction);
+        //print(totalMovement > MOVEMENTCAP || Mathf.Abs(rb.velocity.x) < 0.01);
+        //print(direction);
 
     }
 
