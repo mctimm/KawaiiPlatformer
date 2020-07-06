@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public Transform groundCheckL;
     public Transform groundCheckR;
+    
+    public Transform ungrounded;
     float speed = 6f;
     float walkSpeed  = 4f;
     float runSpeed = 6f;
@@ -59,8 +61,9 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         isGrounded |= Physics2D.Linecast(transform.position, groundCheckL.position, 1 << LayerMask.NameToLayer("Ground"));
         isGrounded |= Physics2D.Linecast(transform.position, groundCheckR.position, 1 << LayerMask.NameToLayer("Ground"));
+        isGrounded &= !Physics2D.Linecast(transform.position, ungrounded.position, 1 << LayerMask.NameToLayer("Ground"));
         //print(LayerMask.NameToLayer("Ground"));
-        //print(isGrounded);
+        //print(isGrounded + ":" + gameObject.transform.position);
 
         float direction = Input.GetAxis("Horizontal");
         float currentAccel = accel *direction;
@@ -153,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
             Invoke("EndGame", 2.0f);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded && rb.velocity.y <= 0.1){
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             rb.velocity = new Vector2(rb.velocity.x,jumpSpeed);
         }
     }
