@@ -6,7 +6,7 @@ public class AxBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D rb;
-
+    
     void Awake(){
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -24,13 +24,7 @@ public class AxBehavior : MonoBehaviour
          
     }
        void OnTriggerEnter2D(Collider2D col){
-        if(!col.gameObject.tag.Equals("EditorOnly") && !col.gameObject.tag.Equals("Player")){
-            if(col.gameObject.tag.Equals("Enemy")){
-                EnemyBasics enemy = col.gameObject.GetComponent<EnemyBasics>();
-                if(enemy != null){
-                    enemy.Death();
-                }
-            }
+        if(!col.gameObject.tag.Equals("EditorOnly") && !col.gameObject.tag.Equals("Enemy")){
             print(col.gameObject.tag);
             Destroy(gameObject);
         }

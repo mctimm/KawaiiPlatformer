@@ -50,11 +50,11 @@ public class DivingEnemyBehavior : EnemyBasics
             isSwooping = true;
         }
 
-        print(rb.velocity);
-        print(swoopSpeed);
-        print(isSwooping);
+        //print(rb.velocity);
+        //print(swoopSpeed);
+        //print(isSwooping);
         if(isSwooping && (rb.position.y >= highPosition)){
-            print("here");
+            //print("here");
             Vector3 temp = gameObject.transform.position;
             temp.y = highPosition;
             gameObject.transform.position = temp;

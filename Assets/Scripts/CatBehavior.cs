@@ -58,7 +58,7 @@ public class CatBehavior : EnemyBasics
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        print(col.gameObject.tag);
+        //print(col.gameObject.tag);
         if(!col.gameObject.tag.Equals("Player") && !col.gameObject.tag.Equals("Untagged")){
                 direction = -direction;
                 totalMovement = 0.0f;
