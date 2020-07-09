@@ -13,8 +13,8 @@ public class AxBehavior : MonoBehaviour
 
     void Start()
     {
-        Vector2 fortyfive = transform.right * -7f;
-        fortyfive.y = 7f;
+        Vector2 fortyfive = transform.right * -2f;
+        fortyfive.y = 8f;
         rb.velocity = fortyfive;
         
     }
@@ -23,7 +23,7 @@ public class AxBehavior : MonoBehaviour
          rb.rotation -= 10f;
          
     }
-       void OnTriggerEnter2D(Collider2D col){
+       void OnCollisionEnter2D(Collision2D col){
         if(!col.gameObject.tag.Equals("EditorOnly") && !col.gameObject.tag.Equals("Enemy")){
             print(col.gameObject.tag);
             Destroy(gameObject);
