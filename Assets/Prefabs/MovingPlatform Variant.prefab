@@ -12,7 +12,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -33,6 +33,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea66a7ef0d0a6047aa886b61cbccd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goingUp: 1
   gap: 4
 --- !u!1001 &3571812075938214366
 PrefabInstance:
@@ -99,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 6448561532209068511, guid: ebf62076015d810478b88f417d495d66,
         type: 3}
       propertyPath: m_Name
-      value: MovingPlatform
+      value: MovingPlatform Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf62076015d810478b88f417d495d66, type: 3}

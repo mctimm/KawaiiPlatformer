@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovingPlatform1 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool goingUp = true;
     float bottom;
     float top;
     Rigidbody2D rb;
@@ -13,12 +14,22 @@ public class MovingPlatform1 : MonoBehaviour
     float movement = 1f;
     void Awake()
     {
-        bottom = gameObject.transform.position.y;
-        direction = 1;
-        top = bottom + gap;
-        rb = gameObject.GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
-
+        if(goingUp)
+        {
+            bottom = gameObject.transform.position.y;
+            direction = 1;
+            top = bottom + gap;
+            rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            top = gameObject.transform.position.y;
+            direction = 1;
+            bottom = top - gap;
+            rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.gravityScale = 0;
+        }
     }
 
     
