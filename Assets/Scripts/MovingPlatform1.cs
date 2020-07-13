@@ -11,7 +11,7 @@ public class MovingPlatform1 : MonoBehaviour
     Rigidbody2D rb;
     public float gap = 4f;
     int direction;
-    float movement = 1f;
+    public float movement = 1f;
     void Awake()
     {
         if(goingUp)
@@ -25,7 +25,7 @@ public class MovingPlatform1 : MonoBehaviour
         else
         {
             top = gameObject.transform.position.y;
-            direction = 1;
+            direction = -1;
             bottom = top - gap;
             rb = gameObject.GetComponent<Rigidbody2D>();
             rb.gravityScale = 0;
