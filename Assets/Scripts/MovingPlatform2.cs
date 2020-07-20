@@ -34,23 +34,23 @@ public class MovingPlatform2 : MonoBehaviour
     }
 
     void FixedUpdate(){
-        // rb.MovePosition(rb.position + (Vector2.right * movement*direction*Time.deltaTime));
-        // if(rb.position.x >= right){
-        //     direction = -1;
-        // } else if (rb.position.x <= left){
-        //     direction = 1;
-        // }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        rb.velocity = Vector2.right * movement*direction;
+        rb.MovePosition(rb.position + (Vector2.right * movement*direction*Time.deltaTime));
         if(rb.position.x >= right){
             direction = -1;
         } else if (rb.position.x <= left){
             direction = 1;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // rb.velocity = Vector2.right * movement*direction;
+        // if(rb.position.x >= right){
+        //     direction = -1;
+        // } else if (rb.position.x <= left){
+        //     direction = 1;
+        // }
         
 
     }

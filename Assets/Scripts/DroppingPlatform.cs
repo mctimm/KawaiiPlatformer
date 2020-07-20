@@ -32,17 +32,25 @@ public class DroppingPlatform  : MonoBehaviour
         }
     }
 
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        rb.velocity = Vector2.up * movement*direction;
+    void FixedUpdate(){
+        
+        rb.MovePosition(rb.position + (Vector2.up * movement * direction * Time.deltaTime));
         if(rb.position.y > top){
             Destroy(gameObject, 0f);
-        } else if (rb.position.y < bottom){
-            Destroy(gameObject, 0f);
-        }
-
+         } else if (rb.position.y < bottom){
+             Destroy(gameObject, 0f);
+         }
     }
+
+    // Update is called once per frame
+    // void Update()
+    // {
+    //     rb.velocity = Vector2.up * movement*direction;
+    //     if(rb.position.y > top){
+    //         Destroy(gameObject, 0f);
+    //     } else if (rb.position.y < bottom){
+    //         Destroy(gameObject, 0f);
+    //     }
+
+    // }
 }

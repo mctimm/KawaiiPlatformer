@@ -35,9 +35,9 @@ public class MovingPlatform1 : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.velocity = Vector2.up * movement*direction;
+        rb.MovePosition(rb.position + (Vector2.up * movement*direction * Time.deltaTime));
         if(rb.position.y >= top){
             direction = -1;
         } else if (rb.position.y <= bottom){
