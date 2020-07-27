@@ -12,9 +12,11 @@ public class PlayerMovement : MonoBehaviour
     bool invincible = false;
     float currentDirection;
     
+    public Transform spawnPoint;
     bool gameOver = false;
 
     public int health = 5;
+    int lives = 5;
 
     float BLINKTIMETOTAL = 3.0f;
     float BLINKDURATION = 0.2f;
@@ -144,6 +146,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(gameOver){
+            return;
+        }
+
         if(isBlinking){
             SpriteBlink();
         }
@@ -162,7 +168,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void EndGame(){
-            SceneManager.LoadScene("GameOver");        
+            lives--;
+            print(lives);
+            if(lives == 0){
+                SceneManager.LoadScene("GameOver"); 
+            }else{
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+                   
     }
 
     private void Recoil(){
