@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         currentDirection = -1;
         locked = false;
+        health = GlobalController.Instance.health;
+        lives = GlobalController.Instance.lives;
     }
 
     void FixedUpdate(){
@@ -169,6 +171,9 @@ public class PlayerMovement : MonoBehaviour
 
     void EndGame(){
             lives--;
+            health = 5;
+            GlobalController.Instance.health = health;
+            GlobalController.Instance.lives = lives;
             print(lives);
             if(lives == 0){
                 SceneManager.LoadScene("GameOver"); 

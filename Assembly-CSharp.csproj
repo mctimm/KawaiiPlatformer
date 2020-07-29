@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\FireBallCast.cs" />
      <Compile Include="Assets\Scripts\FoxMaschotMovement.cs" />
      <Compile Include="Assets\Scripts\GhoulMovement.cs" />
+     <Compile Include="Assets\Scripts\GlobalController.cs" />
      <Compile Include="Assets\Scripts\LevelEnder.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform1.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform2.cs" />
