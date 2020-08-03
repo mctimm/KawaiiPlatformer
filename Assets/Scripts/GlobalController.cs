@@ -8,6 +8,11 @@ public class GlobalController : MonoBehaviour
 
     public int health;
     public int lives;
+
+    //starting at level 2 because level 1 is currently named improperly
+    public int level = 2;
+
+    
     void Awake ()   
        {
         if (Instance == null)
@@ -20,4 +25,11 @@ public class GlobalController : MonoBehaviour
             Destroy (gameObject);
         }
       }
+
+    public string nextLevel(){
+        level++;
+        if(level <= 5) return "Level" + level;
+        else return "GameOver";
+        
+    }
 }
