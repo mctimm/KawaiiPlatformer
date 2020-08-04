@@ -9,8 +9,9 @@ public class GlobalController : MonoBehaviour
     public int health;
     public int lives;
 
+    public float timer = 0.0f;
     //starting at level 2 because level 1 is currently named improperly
-    public int level = 2;
+    public int level = 1;
 
     
     void Awake ()   
@@ -27,7 +28,7 @@ public class GlobalController : MonoBehaviour
       }
 
     public string nextLevel(){
-        level++;
+        ++level;
         if(level <= 5) return "Level" + level;
         else return "GameOver";
         

@@ -10,9 +10,11 @@ public class TimerScript : MonoBehaviour
     void Awake()
     {
         timeText = gameObject.GetComponent<Text>();
+        
     }
     void Start()
     {
+        totalTime = GlobalController.Instance.timer;
         UpdateText();
     }
 
@@ -29,5 +31,9 @@ public class TimerScript : MonoBehaviour
 
     float truncate(float n){
         return ((int)(n*10))/10.0f;
+    }
+
+    public float getTotal(){
+        return totalTime;
     }
 }

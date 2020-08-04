@@ -19,7 +19,9 @@ public class LevelEnder : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         animator.SetBool("Collected", true);
         GlobalController.Instance.health = col.gameObject.GetComponent<PlayerMovement>().health;
+        GlobalController.Instance.timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<TimerScript>().getTotal();
         Invoke("nextLevel", 3f);
+        
     }
 
     void Update(){

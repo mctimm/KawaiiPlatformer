@@ -174,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
             health = 5;
             GlobalController.Instance.health = health;
             GlobalController.Instance.lives = lives;
-            print(lives);
+            //print(lives);
+            GlobalController.Instance.timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<TimerScript>().getTotal();
             if(lives == 0){
                 SceneManager.LoadScene("GameOver"); 
             }else{
