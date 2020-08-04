@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     bool gameOver = false;
 
     public int health = 5;
-    int lives = 5;
+    public int lives = 5;
 
     float BLINKTIMETOTAL = 3.0f;
     float BLINKDURATION = 0.2f;

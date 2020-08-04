@@ -58,7 +58,9 @@
      <Compile Include="Assets\Scripts\MovingPlatform2.cs" />
      <Compile Include="Assets\Scripts\PlatformSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\TimerScript.cs" />
      <Compile Include="Assets\Scripts\UIInGame.cs" />
+     <Compile Include="Assets\Scripts\UserInterface.cs" />
      <Compile Include="Assets\Scripts\WeaponChange.cs" />
      <Compile Include="Assets\Scripts\WizardBehavior.cs" />
     <Reference Include="UnityEngine">
